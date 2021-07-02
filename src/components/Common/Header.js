@@ -4,15 +4,21 @@ import { Link } from 'react-router-dom';
 class Header extends Component {
   render() {
     return (
-      <header className="masthead">
+      <header className="masthead" style={{ backgrounImage: this.props.image }}>
         <div className="container">
           <div className="masthead-subheading">{this.props.title}</div>
+
           <div className="masthead-heading text-uppercase">
             {this.props.subtitle}
           </div>
-          <aLink className="btn btn-primary btn-xl text-uppercase" to={this.props.link}>
-            {this.props.buttonText}
-          </Link>
+          {this.props.showButton && (
+            <Link
+              className="btn btn-primary btn-xl text-uppercase"
+              to={this.props.link}
+            >
+              {this.props.buttonText}
+            </Link>
+          )}
         </div>
       </header>
     );
