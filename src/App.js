@@ -13,6 +13,7 @@ class App extends Component {
         <PageWrapper>
           <Route exact={true} path="/" component={Home} />
           <Route path="/about" component={About} />
+
         </PageWrapper>
       </Router>
     );
